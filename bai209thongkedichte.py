@@ -1,3 +1,16 @@
+"""
+Trước diễn biến phức tạp của dịch bệnh, thành phố đang có chủ chương thống kê dịch tễ các trường hợp liên quan đến bệnh nhân mắc COVID-19.
+Thông tin về bệnh nhân được biểu diễn trên ma trận. Bạn hãy thực hiện thống kê nhanh các trường hợp có nguy cơ lây nhiễm. Nguyên tắc tính là đếm các trường hợp xung quanh bệnh nhân đã tiếp xúc (8 ô xung quanh).
+
+Input:
+Dòng đầu tiên là 2 số M, N là các số nguyên <= 100, cho biết kích thước của ma trận.
+Tiếp theo là ma trận M x N, các số nguyên A[i][j] có giá trị < 10. Vị trí của mỗi bệnh nhân được đánh số -1. Các ô mang giá trị >= 0 thể hiện số trường hợp có nguy cơ lây nhiễm (không tính các bệnh nhân).
+
+Output:
+Tổng số các ca có nguy cơ lây nhiễm trên toàn thành phố.
+"""
+
+
 n, m = [int(i) for i in input().split()]
 res = 0
 
