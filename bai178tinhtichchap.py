@@ -30,3 +30,27 @@ Với mỗi test, hãy in ra tổng các phần tử của ma trận mới tìm 
 1 1 1
 1 1 1
 """
+
+import sys
+
+
+def solve():
+    N, M = map(int, sys.stdin.readline().split())
+
+    image = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+    kernel = [list(map(int, sys.stdin.readline().split())) for _ in range(3)]
+
+    total_sum = 0
+    for i in range(N - 2):
+        for j in range(M - 2):
+            current_convolution_val = sum(
+                kernel[ki][kj] * image[i + ki][j + kj]
+                for ki in range(3) for kj in range(3)
+            )
+            total_sum += current_convolution_val
+
+    print(total_sum)
+
+num_tests = int(sys.stdin.readline())
+for _ in range(num_tests):
+    solve()
